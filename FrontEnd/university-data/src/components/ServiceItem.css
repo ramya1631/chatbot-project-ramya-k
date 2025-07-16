@@ -1,0 +1,13 @@
+.service-item {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  background-color: #f0f9f9;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service-item h4 {
+  margin-bottom: 0.5rem;
+  color: #01959a;
+}

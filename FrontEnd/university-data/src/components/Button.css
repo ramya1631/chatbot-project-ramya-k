@@ -1,0 +1,15 @@
+.btn {
+  padding: 0.6rem 1.2rem;
+  background-color: navy;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: orange;
+  color: navy;
+}
