@@ -43,7 +43,6 @@ public class AdminController {
                     .body(Map.of("error", e.getClass().getSimpleName(), "message", e.getMessage()));
         }
     }
-
     // PUT: update admin by ID
     @PutMapping("/{id}")
     public Admin updateAdmin(@PathVariable Long id, @RequestBody Admin updatedAdmin) {
