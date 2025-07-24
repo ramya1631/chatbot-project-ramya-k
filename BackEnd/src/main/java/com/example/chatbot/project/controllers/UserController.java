@@ -12,10 +12,13 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/users")
 @CrossOrigin(origins = "http://localhost:5173")
+
 public class UserController {
+
 
     @Autowired
     private UserService userService;
+
 
     // Endpoint to get all users
 //http://localhost:8080/api/users/register
