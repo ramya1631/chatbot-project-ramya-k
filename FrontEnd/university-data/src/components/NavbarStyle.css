@@ -14,6 +14,7 @@
   color: #b1fe81 !important;
 }
 
+
 .navbar-brand {
   font-weight: bold;
   color: #fff !important;
@@ -25,12 +26,14 @@
   padding: 0;
   margin: 0;
 }
+
 .navbar {
   animation: gradientShift 10s ease infinite;
   background: linear-gradient(270deg, #79c3fe, #f875b0, #20c997);
   background-size: 600% 600%;
   color: white;
 }
+
 
 @keyframes gradientShift {
   0% {
