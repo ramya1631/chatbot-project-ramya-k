@@ -55,6 +55,7 @@ public class UserService {
         userRepository.deleteById(id);
     }
 
+
     private void sendPendingApprovalEmail(String toEmail, String userName) {
         try {
             SimpleMailMessage message = new SimpleMailMessage();
@@ -78,6 +79,7 @@ public class UserService {
             throw new RuntimeException("Failed to send approval email: " + e.getMessage());
         }
     }
+
 
 }
 

@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 
+
 public class ContactController {
     @Autowired
     private ContactRepository contactRepository;
@@ -23,6 +24,7 @@ public class ContactController {
         Contact saved = contactRepository.save(contact);
         System.out.println("Contact saved: " + saved.getId());
         return ResponseEntity.ok(saved);
+
     }
 
 
@@ -35,6 +37,7 @@ public class ContactController {
     public ResponseEntity<?> deleteContact(@PathVariable Long id) {
         contactRepository.deleteById(id);
         return ResponseEntity.ok("Deleted");
+
     }
 
 
