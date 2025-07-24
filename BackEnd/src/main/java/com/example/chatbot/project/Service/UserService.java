@@ -51,6 +51,7 @@ public class UserService {
     }
 
 
+
     public void deleteUser(Long id) {
         userRepository.deleteById(id);
     }
@@ -66,6 +67,7 @@ public class UserService {
             throw new RuntimeException("Failed to send registration email: " + e.getMessage());
         }
     }
+
 
 
     private void sendApprovalEmail(String toEmail, String userName) {
