@@ -20,6 +20,8 @@ public class UserController {
     // Endpoint to get all users
 //http://localhost:8080/api/users/register
 
+
+
     @GetMapping
     public List<User> getAllUsers() {
         return userService.getAllUsers();
