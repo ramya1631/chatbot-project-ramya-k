@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "contacts")
 public class Contact {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id; // Unique identifier for the contact
@@ -56,6 +57,7 @@ public class Contact {
         this.message = message;
     }
 }
+
 
 
 

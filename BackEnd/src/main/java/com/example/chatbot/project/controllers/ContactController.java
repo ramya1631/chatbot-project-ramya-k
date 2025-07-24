@@ -25,6 +25,7 @@ public class ContactController {
         return ResponseEntity.ok(saved);
     }
 
+
     @GetMapping
     public List<Contact> getAllContacts() {
 

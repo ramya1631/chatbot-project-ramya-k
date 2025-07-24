@@ -24,6 +24,7 @@ public class UserService {
         return userRepository.findAll();
 
     }
+
     public User saveUser(User user){
         Optional<User> existing =userRepository.findByEmail(user.getEmail());
         if (existing.isPresent()) {
@@ -49,6 +50,7 @@ public class UserService {
         throw new RuntimeException("User not found");
     }
 
+
     public void deleteUser(Long id) {
         userRepository.deleteById(id);
     }
@@ -64,6 +66,7 @@ public class UserService {
             throw new RuntimeException("Failed to send registration email: " + e.getMessage());
         }
     }
+
 
     private void sendApprovalEmail(String toEmail, String userName) {
         try {
