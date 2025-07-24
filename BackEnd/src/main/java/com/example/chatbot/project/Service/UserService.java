@@ -50,6 +50,7 @@ public class UserService {
         throw new RuntimeException("User not found");
     }
 
+
     // Method to delete a user by ID
     public void deleteUser(Long id) {
         userRepository.deleteById(id);
@@ -66,8 +67,6 @@ public class UserService {
             throw new RuntimeException("Failed to send registration email: " + e.getMessage());
         }
     }
-
-
 
     private void sendApprovalEmail(String toEmail, String userName) {
         try {

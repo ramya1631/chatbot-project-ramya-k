@@ -37,6 +37,7 @@ public class Admin {
         return password;
     }
 
+
     public void setPassword(String password) {
         this.password = password;
     }
@@ -48,3 +49,5 @@ public class Admin {
         this.email = email;
     }
 }
+
+
