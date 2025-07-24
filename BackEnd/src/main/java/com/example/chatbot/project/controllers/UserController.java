@@ -13,6 +13,7 @@ import java.util.Map;
 @RequestMapping("/api/users")
 @CrossOrigin(origins = "http://localhost:5173")
 public class UserController {
+
     @Autowired
     private UserService userService;
 
@@ -23,6 +24,8 @@ public class UserController {
     public List<User> getAllUsers() {
         return userService.getAllUsers();
     }
+    // Endpoint to register a new user
+
     @PostMapping("/register")
     public ResponseEntity<?> registerUser(@RequestBody User user) {
         try {
