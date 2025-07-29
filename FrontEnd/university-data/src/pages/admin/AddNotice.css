@@ -1,0 +1,42 @@
+.notice-section {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.notice-section h2 {
+  margin-bottom: 20px;
+}
+
+.notice-section .success {
+  color: green;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.notice-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.notice-section input,
+.notice-section textarea {
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.notice-section button {
+  padding: 12px;
+  background-color: #001f3f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.notice-section button:hover {
+  background-color: #003366;
+}

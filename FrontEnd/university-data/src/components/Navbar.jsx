@@ -38,7 +38,7 @@ function Navbar() {
     <nav className="navbar navbar-expand-lg navbar-dark custom-navbar shadow sticky-top">
       <div className="container-fluid">
         {/* Left Corner Logo */}
-        <Link className="navbar-brand me-auto" to="/">🎓LaunchCode UniversityBot</Link>
+        <Link className="navbar-brand me-auto" to="/">🎓UnivercityBot</Link>
 
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span className="navbar-toggler-icon"></span>
@@ -81,7 +81,6 @@ function Navbar() {
         )}
       </div>
     </nav>
-
   );
 }
 
