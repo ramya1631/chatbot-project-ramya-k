@@ -1,0 +1,67 @@
+.marquee-text {
+  background: #f8f9fa;
+  color: #dc3545;
+  padding: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+}
+
+.post-card {
+  border-left: 4px solid #007bff;
+  background: #f1f9ff;
+}
+.admission-section {
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.headline-box {
+  /* background: #ffe4ec; */
+  padding: 12px 20px;
+  border-radius: 8px;
+  /* border-left: 5px solid #e91e63; */
+  font-weight: 600;
+  color: #b00047;
+  font-size: 1rem;
+  animation: slidein 15s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes slidein {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.card-announcement {
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.card-announcement:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #e91e63;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #333;
+}
+
+.timestamp {
+  font-size: 0.85rem;
+  color: #888;
+}
+
