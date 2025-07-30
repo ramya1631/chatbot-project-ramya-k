@@ -15,15 +15,11 @@ import java.util.Map;
 
 public class UserController {
 
-
     @Autowired
     private UserService userService;
 
-
     // Endpoint to get all users
 //http://localhost:8080/api/users/register
-
-
 
     @GetMapping
     public List<User> getAllUsers() {

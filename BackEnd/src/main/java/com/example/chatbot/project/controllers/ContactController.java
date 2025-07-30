@@ -25,7 +25,6 @@ public class ContactController {
 
     }
 
-
     @GetMapping
     public List<Contact> getAllContacts() {
 
