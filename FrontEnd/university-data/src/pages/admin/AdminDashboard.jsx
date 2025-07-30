@@ -42,6 +42,7 @@ const Admissions = () => {
         </div>
 
       </div>
+
     </div>
   );
 };
