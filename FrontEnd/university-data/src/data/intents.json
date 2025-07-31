@@ -1,2 +1,51 @@
 
+{
+  "intents": [
+    {
+      "tag": "fees",
+      "patterns": ["fees", "fee structure", "how much to pay", "payment deadline", "fee payment"],
+      "responses": [
+        "The tuition fee is ₹50,000 per semester.",
+        "You can pay your fees via the student portal using Net Banking or UPI.",
+        "Fee payment deadlines are usually by the 10th of every semester month."
+      ]
+    },
+    {
+      "tag": "library",
+      "patterns": ["library", "library timing", "library hours", "books", "library rules"],
+      "responses": [
+        "Library is open from 9 AM to 9 PM on weekdays.",
+        "You can borrow up to 3 books at a time for 14 days.",
+        "Library membership is automatic for all students."
+      ]
+    },
+    {
+      "tag": "admissions",
+      "patterns": ["admission", "apply", "admission process", "entrance", "last date"],
+      "responses": [
+        "Admissions are open till August 31st.",
+        "You can apply through our online portal on the official website.",
+        "Entrance exams are required for BTech and MTech programs."
+      ]
+    },
+    {
+      "tag": "courses",
+      "patterns": ["courses", "what courses", "subjects", "programs", "degrees"],
+      "responses": [
+        "We offer BTech, MTech, MBA, and MCA programs.",
+        "Popular courses include CSE, ECE, Civil, and Data Science.",
+        "Full course list is available on our Academics page."
+      ]
+    },
+    {
+      "tag": "contact",
+      "patterns": ["contact", "phone", "email", "support", "helpdesk"],
+      "responses": [
+        "You can contact us at +91-1234567890.",
+        "Email support is available at support@university.com.",
+        "Helpdesk is available 9AM to 6PM on working days."
+      ]
+    }
+  ]
+}
 

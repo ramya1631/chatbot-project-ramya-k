@@ -1,4 +1,4 @@
-package com.example.chatbot.project.models;
+package com.example.chatbot.project.Feedback;
 
 public class FeedbackRequest {
 
@@ -23,6 +23,6 @@ public class FeedbackRequest {
     }
 }
 
-}
+
 
 

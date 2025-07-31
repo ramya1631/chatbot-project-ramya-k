@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import './Admissions.css';
+import "./AdminDashboard.css";
+
 
 const Admissions = () => {
   const [posts, setPosts] = useState([]);
