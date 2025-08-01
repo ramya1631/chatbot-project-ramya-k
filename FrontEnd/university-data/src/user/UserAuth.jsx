@@ -71,6 +71,7 @@ function UserAuth() {
         });
 
 
+
         if (res.data.status === "registered") {
           Swal.fire("Success", "Registration successful. Await admin approval", "success");
           setIsLogin(true);
@@ -128,6 +129,7 @@ function UserAuth() {
                 <span onClick={toggleForm}>Register</span>
               </>
             ) : (
+
               <>
                 Already have an account?{" "}
                 <span onClick={toggleForm}>Login</span>
