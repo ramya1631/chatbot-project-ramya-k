@@ -4,6 +4,7 @@
   100% { background-position: 0% 50%; }
 }
 
+
 .chat-toggle-btn {
   position: fixed;
   bottom: 20px;
@@ -19,6 +20,7 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   z-index: 1001;
 }
+
 
 .chatbox {
   position: fixed;
@@ -46,6 +48,7 @@
   justify-content: space-between;
   align-items: center;
 }
+
 
 .chatbox-body {
   flex: 1;
