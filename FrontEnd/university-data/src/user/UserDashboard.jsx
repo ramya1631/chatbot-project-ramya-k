@@ -61,6 +61,7 @@ const UserDashboard = () => {
         </div>
       </div>
 
+
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={handleClose}
@@ -74,6 +75,7 @@ const UserDashboard = () => {
 
         <h3 style={{ color: '#c5f86cff' }}>{announcement?.title}</h3>
         <p style={{ color: '#6cf8d0dc' }}>{announcement?.content}</p>
+
 
         <textarea
           className="feedback-textarea"
@@ -94,3 +96,4 @@ const UserDashboard = () => {
 };
 
 export default UserDashboard;
+
