@@ -34,6 +34,7 @@ function UserAuth() {
       return;
     }
 
+
     try {
       if (isLogin) {
         const res = await axios.post("http://localhost:8080/api/users/login", {
@@ -51,6 +52,7 @@ function UserAuth() {
           localStorage.setItem("userName", user.name || "");
           localStorage.setItem("userEmail", user.email || "");
 
+
           // ✅ Navigate to dashboard and force reload for navbar to update
           navigate("/user/dashboard");
           window.location.reload();
@@ -66,6 +68,7 @@ function UserAuth() {
           password,
         });
 
+
         if (res.data.status === "registered") {
           Swal.fire("Success", "Registration successful. Await admin approval", "success");
           setIsLogin(true);
@@ -80,6 +83,7 @@ function UserAuth() {
 }
 
   };
+
 
   return (
     <div className="auth-body">
@@ -103,6 +107,7 @@ function UserAuth() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
+
             <input
               type="password"
               placeholder="Password"
