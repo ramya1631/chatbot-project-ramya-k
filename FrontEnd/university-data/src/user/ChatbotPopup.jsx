@@ -134,6 +134,7 @@ function ChatbotPopup() {
           <div className="chatbox-footer">
             <input
               type="text"
+
               className="form-control"
               placeholder="Type your message..."
               value={input}
@@ -151,3 +152,6 @@ function ChatbotPopup() {
 }
 
 export default ChatbotPopup;
+
+
+
