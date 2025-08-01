@@ -11,6 +11,7 @@ const Admissions = () => {
       .catch((err) => console.error('Error fetching posts:', err));
   }, []);
 
+
   return (
     <div className="container admission-section">
       <div className="row">
