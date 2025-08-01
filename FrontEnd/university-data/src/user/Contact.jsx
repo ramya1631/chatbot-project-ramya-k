@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import axios from 'axios';
 import Swal from 'sweetalert2';
@@ -43,7 +44,7 @@ const Contact = () => {
           <input type="email" name="email" placeholder="Your Email" value={formData.email} onChange={handleChange} required />
           <input type="text" name="subject" placeholder="Subject" value={formData.subject} onChange={handleChange} required />
           <textarea name="message" rows="4" placeholder="Your Message" value={formData.message} onChange={handleChange} required></textarea>
-          <button type="submit">🚀 Send Message</button>
+          <button type="submit">🚀Send Message</button>
         </form>
       </div>
 

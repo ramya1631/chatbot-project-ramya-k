@@ -1,34 +1,82 @@
-.admin-login-container {
-  max-width: 400px;
-  margin: 2rem auto;
-  padding: 20px;
-  border-radius: 12px;
-  background: #f0f0f0;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+.admin-login-wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(-45deg, #1a1a2e, #16213e, #0f3460, #533483);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.admin-login-container h2 {
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.admin-login-box {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 40px 30px;
+  border-radius: 15px;
+  width: 380px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  color: #fff;
+  animation: fadeIn 1s ease-in;
+}
+
+.admin-login-box h2 {
   text-align: center;
-  margin-bottom: 20px;
-  color: #333;
+  margin-bottom: 30px;
+  font-weight: 600;
+  font-size: 24px;
+  color: #ffffff;
 }
 
-.admin-login-container input,
-.admin-login-container button {
+.form-group {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.form-group input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 10px 5px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-group input:focus {
+  border-bottom-color: #00adb5;
+}
+
+.form-group input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.admin-login-btn {
   width: 100%;
   padding: 12px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-
-.admin-login-container button {
-  background-color: #0077b6;
-  color: white;
+  background-color: #00adb5;
+  color: #fff;
   font-weight: bold;
   border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-.admin-login-container button:hover {
-  background-color: #005f86;
+.admin-login-btn:hover {
+  background-color: #008891;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
 }

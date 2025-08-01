@@ -1,51 +1,87 @@
-import React, { useEffect, useState } from 'react';
-import "./AdminDashboard.css";
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import './AdminDashboard.css';
+import { FaUsers, FaRobot, FaChartBar, FaSignOutAlt, FaBullhorn } from 'react-icons/fa';
 
+function AdminDashboard() {
+  const navigate = useNavigate();
 
-const Admissions = () => {
-  const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
-    fetch('http://localhost:8080/api/posts/all')
-      .then((res) => res.json())
-      .then((data) => setPosts(data))
-      .catch((err) => console.error('Error fetching posts:', err));
-  }, []);
+  const handleLogout = () => {
+    localStorage.removeItem('adminLoggedIn');
+    navigate('/adminlogin');
+  };
 
   return (
-    <div className="container admission-section">
-      <div className="row">
+    <div className="container mt-5">
+      <div className="d-flex justify-content-between align-items-center mb-4">
+        <h2>Welcome, Admin 👩‍🎓</h2>
+        <button className="btn btn-danger" onClick={handleLogout}>
+          <FaSignOutAlt /> Logout
+        </button>
+      </div>
 
-        {/* Admission Headlines */}
-        <div className="col-md-6 mb-4">
-          <h4>🎓 Admission Headlines</h4>
-          <div className="headline-box">
-            🚀 Admissions Open for 2025 | 🎯 Last Date: Aug 15 | 📝 Entrance Exam: Aug 20 | 📢 Results: Sept 1
+      <div className="row">
+        <div className="col-md-4 mb-4">
+          <div className="card dashboard-card" onClick={() => navigate('/admin/create-post')}>
+            <div className="card-body text-center">
+              <FaBullhorn size={40} className="mb-3 text-info" />
+              <h5 className="card-title">Create Announcement</h5>
+              <p className="card-text">Post news or alerts for users.</p>
+            </div>
           </div>
         </div>
 
-        {/* Announcements */}
-        <div className="col-md-6 mb-4">
-          <h4>📢 Latest Announcements</h4>
-          {posts.length === 0 ? (
-            <p>No announcements available.</p>
-          ) : (
-            posts.map((post) => (
-              <div key={post.id} className="card-announcement">
-                <div className="card-title">{post.title}</div>
-                <div className="card-text">{post.content}</div>
-                <div className="timestamp">
-                  Posted on {new Date(post.createdAt).toLocaleString()}
-                </div>
-              </div>
-            ))
-          )}
+        <div className="col-md-4 mb-4">
+          <div className="card dashboard-card" onClick={() => navigate('/admin/users')}>
+            <div className="card-body text-center">
+              <FaUsers size={40} className="mb-3 text-primary" />
+              <h5 className="card-title">Manage Users</h5>
+              <p className="card-text">View, edit and delete user accounts.</p>
+            </div>
+          </div>
+        </div>
+<div className="col-md-4 mb-4">
+  <div className="card dashboard-card" onClick={() => navigate('/admin/posts')}>
+    <div className="card-body text-center">
+      <FaBullhorn size={40} className="mb-3 text-warning" />
+      <h5 className="card-title">View Announcements</h5>
+      <p className="card-text">See all posts made by the admin.</p>
+    </div>
+  </div>
+</div>
+
+<div className="col-md-4 mb-4">
+  <div className="card dashboard-card" onClick={() => navigate('/admin/feedback')}>
+    <div className="card-body text-center">
+      <FaUsers size={40} className="mb-3 text-danger" />
+      <h5 className="card-title">View Feedback</h5>
+      <p className="card-text">Review user responses to posts.</p>
+    </div>
+  </div>
+</div>
+
+        <div className="col-md-4 mb-4">
+          <div className="card dashboard-card" onClick={() => navigate('/admin/messages')}>
+            <div className="card-body text-center">
+              <FaRobot size={40} className="mb-3 text-success" />
+              <h5 className="card-title">View Messages</h5>
+              <p className="card-text">Access all user messages.</p>
+            </div>
+          </div>
         </div>
 
+        <div className="col-md-4 mb-4">
+          <div className="card dashboard-card" onClick={() => navigate('/admin/analytics')}>
+            <div className="card-body text-center">
+              <FaChartBar size={40} className="mb-3 text-warning" />
+              <h5 className="card-title">Analytics</h5>
+              <p className="card-text">Monitor chatbot performance metrics.</p>
+            </div>
+          </div>
+        </div>
       </div>
-
     </div>
   );
-};
+}
 
-export default Admissions;
+export default AdminDashboard;

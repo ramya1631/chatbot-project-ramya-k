@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-import image from '../assets/img_5.png'; // rename uploaded image to 'hero.jpg' and put in /assets/
+import image from '../assets/img_5.png';
 
 function Home() {
   return (

@@ -2,7 +2,7 @@
 import React from 'react';
 import './Analytics.css';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import { useNavigate } from 'react-router-dom'; // ✅ Import navigate
+import { useNavigate } from 'react-router-dom';
 
 const dummyData = [
   { name: 'Mon', messages: 50 },
@@ -15,7 +15,7 @@ const dummyData = [
 ];
 
 function Analytics() {
-  const navigate = useNavigate(); // ✅ useNavigate hook
+  const navigate = useNavigate();
 
   return (
     <div className="analytics-page container mt-4">

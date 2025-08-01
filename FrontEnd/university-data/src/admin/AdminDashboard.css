@@ -1,67 +1,87 @@
-.marquee-text {
-  background: #f8f9fa;
-  color: #dc3545;
-  padding: 10px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  border: 1px solid #dee2e6;
-  border-radius: 5px;
+.admin-dashboard {
+  padding: 2rem;
+  background-color: #f5f6fa;
+  height: 100vh;
 }
 
-.post-card {
-  border-left: 4px solid #007bff;
-  background: #f1f9ff;
-}
-.admission-section {
-  margin-top: 40px;
-  padding: 20px;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.headline-box {
-  /* background: #ffe4ec; */
-  padding: 12px 20px;
+.logout-btn {
+  background-color: #e74c3c;
+  color: white;
+  padding: 8px 16px;
+  border: none;
   border-radius: 8px;
-  /* border-left: 5px solid #e91e63; */
-  font-weight: 600;
-  color: #b00047;
-  font-size: 1rem;
-  animation: slidein 15s linear infinite;
-  white-space: nowrap;
+  cursor: pointer;
 }
 
-@keyframes slidein {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
+.dashboard-cards {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.5rem;
 }
 
-.card-announcement {
-  background-color: #fff;
-  border: 1px solid #dee2e6;
-  border-radius: 10px;
-  padding: 15px 20px;
-  margin-bottom: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
+.card {
+  background-color: #3498db;
+  color: white;
+  padding: 2rem;
+  flex: 1;
+  text-align: center;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s;
 }
 
-.card-announcement:hover {
-  transform: scale(1.02);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+.card:hover {
+  transform: scale(1.05);
+}
+.dashboard-card {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.card-title {
-  font-weight: bold;
-  font-size: 1.2rem;
-  color: #e91e63;
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+.dashboard-card {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
 }
 
-.card-text {
-  font-size: 1rem;
-  color: #333;
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
 }
 
-.timestamp {
-  font-size: 0.85rem;
-  color: #888;
+.table th,
+.table td {
+  vertical-align: middle;
 }
 
+.modal-content {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  color: #000;
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+.modal-footer {
+  border-top: none;
+}

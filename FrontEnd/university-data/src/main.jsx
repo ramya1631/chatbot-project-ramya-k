@@ -1,5 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';  // this enables navbar toggling
 import App from './App.jsx';
 
    // Creating a root DOM node where the React app will be rendered.

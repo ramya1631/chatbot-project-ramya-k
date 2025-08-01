@@ -2,11 +2,12 @@
 import React, { useState } from "react";
 import axios from "axios";
 import './AddNotice.css';
-
+import { useNavigate } from "react-router-dom";
 const AddNotice = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [success, setSuccess] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,6 +22,9 @@ const AddNotice = () => {
 
   return (
     <div className="notice-section">
+       <button className="btn btn-secondary mb-3" onClick={() => navigate(-1)}>
+        ← Go Back
+      </button>
       <h2>Add New Notice</h2>
       {success && <p className="success">Notice posted successfully!</p>}
       <form onSubmit={handleSubmit}>
