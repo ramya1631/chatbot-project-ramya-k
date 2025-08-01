@@ -2,6 +2,7 @@ import React from 'react';
 import AboutImg from "../assets/stud.png";
 import './About.css';   // Import the CSS file
 
+
 const About = () => {
   return (
     <div className="about-container">
