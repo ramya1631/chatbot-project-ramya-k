@@ -118,6 +118,7 @@ function ChatbotPopup() {
               </div>
             ))}
             <div ref={chatEndRef}></div>
+
             <div className="recommendation-buttons">
               {tags.map((tag, idx) => (
                 <button
@@ -131,6 +132,7 @@ function ChatbotPopup() {
             </div>
           </div>
 
+
           <div className="chatbox-footer">
             <input
               type="text"
@@ -143,6 +145,7 @@ function ChatbotPopup() {
             />
             <button className="btn btn-primary" onClick={() => handleSend()}>
               Send
+
             </button>
           </div>
         </div>
