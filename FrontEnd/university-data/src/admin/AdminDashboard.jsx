@@ -70,15 +70,8 @@ function AdminDashboard() {
           </div>
         </div>
 
-        <div className="col-md-4 mb-4">
-          <div className="card dashboard-card" onClick={() => navigate('/admin/analytics')}>
-            <div className="card-body text-center">
-              <FaChartBar size={40} className="mb-3 text-warning" />
-              <h5 className="card-title">Analytics</h5>
-              <p className="card-text">Monitor chatbot performance metrics.</p>
-            </div>
-          </div>
-        </div>
+
+
       </div>
     </div>
   );

@@ -1,8 +1,10 @@
+// src/user/UserDashboard.jsx
+
 import React, { useState, useEffect } from 'react';
 import Modal from 'react-modal';
 import ChatbotPopup from './ChatbotPopup';
 import './UserDashboard.css';
-import DashboardImage from '../assets/img_6.png';
+import DashboardImage from '../assets/grad.png';
 
 Modal.setAppElement('#root');
 
@@ -10,12 +12,13 @@ const UserDashboard = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [announcement, setAnnouncement] = useState(null);
   const [feedback, setFeedback] = useState('');
+  const [feedbackMessage, setFeedbackMessage] = useState('');
 
   useEffect(() => {
     const fetchAnnouncement = async () => {
       try {
         const res = await fetch('http://localhost:8080/api/posts/latest');
-        const data = await resi.json();
+        const data = await res.json(); // ✅ Fixed typo here
 
         if (data && !localStorage.getItem(`postSeen_${data.id}`)) {
           setAnnouncement(data);
@@ -40,15 +43,14 @@ const UserDashboard = () => {
       localStorage.setItem(`postSeen_${announcement.id}`, 'true');
       setModalIsOpen(false);
       setFeedback('');
-      alert('✅ Feedback submitted!');
+      setFeedbackMessage('✅ Feedback submitted successfully!');
     } catch (error) {
       console.error('Error submitting feedback:', error);
-      alert('❌ Failed to submit feedback.');
+      setFeedbackMessage('❌ Failed to submit feedback.');
     }
   };
 
   const handleClose = () => {
-    // ✅ No localStorage set here — so modal shows again on reload
     setModalIsOpen(false);
   };
 
@@ -58,9 +60,9 @@ const UserDashboard = () => {
         <div className="dashboard-content">
           <h2>🚀 <span style={{ color: '#00bcd4' }}>Welcome to the User Dashboard</span></h2>
           <p>You can interact with UniBot using the chat icon at the bottom-right corner.</p>
+          {feedbackMessage && <p style={{ marginTop: '10px', color: '#ffffff' }}>{feedbackMessage}</p>}
         </div>
       </div>
-
 
       <Modal
         isOpen={modalIsOpen}
@@ -75,7 +77,6 @@ const UserDashboard = () => {
 
         <h3 style={{ color: '#c5f86cff' }}>{announcement?.title}</h3>
         <p style={{ color: '#6cf8d0dc' }}>{announcement?.content}</p>
-
 
         <textarea
           className="feedback-textarea"
@@ -96,4 +97,3 @@ const UserDashboard = () => {
 };
 
 export default UserDashboard;
-

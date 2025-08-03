@@ -14,17 +14,17 @@ const CreatePost = () => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ title, content }),
       });
-      alert('Post created!');
+      alert('✅ Post created successfully!');
       navigate('/admin/dashboard');
     } catch (err) {
       console.error(err);
-      alert('Error creating post');
+      alert('❌ Error creating post.');
     }
   };
 
   return (
     <div className="container mt-5">
-       <button className="btn btn-secondary mb-3" onClick={() => navigate(-1)}>
+      <button className="btn btn-secondary mb-3" onClick={() => navigate(-1)}>
         ← Go Back
       </button>
       <h2>Create New Announcement</h2>
@@ -49,7 +49,9 @@ const CreatePost = () => {
             onChange={(e) => setContent(e.target.value)}
           ></textarea>
         </div>
-        <button className="btn btn-primary">Publish</button>
+        <button type="submit" className="btn btn-primary">
+          📢 Publish
+        </button>
       </form>
     </div>
   );

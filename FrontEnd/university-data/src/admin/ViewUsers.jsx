@@ -1,10 +1,13 @@
+// src/admin/ViewUsers.jsx
+
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 
 const ViewUsers = () => {
   const [users, setUsers] = useState([]);
-  const navigate = useNavigate(); // For Go Back navigation
+  const navigate = useNavigate();
 
   // Fetch all users
   const fetchUsers = async () => {
@@ -13,6 +16,7 @@ const ViewUsers = () => {
       setUsers(response.data);
     } catch (error) {
       console.error("Error fetching users:", error);
+      Swal.fire("Error", "Unable to fetch users", "error");
     }
   };
 
@@ -20,22 +24,34 @@ const ViewUsers = () => {
   const handleApprove = async (id) => {
     try {
       await axios.put(`http://localhost:8080/api/users/approve/${id}`);
-      alert("User approved and email sent.");
+      Swal.fire("Success", "User approved and email sent.", "success");
       fetchUsers();
     } catch (error) {
       console.error("Error approving user:", error);
+      Swal.fire("Error", "Could not approve user", "error");
     }
   };
 
-  // Delete user
+  // Delete user with SweetAlert confirmation
   const handleDelete = async (id) => {
-    if (window.confirm("Are you sure you want to delete this user?")) {
+    const result = await Swal.fire({
+      title: "Are you sure?",
+      text: "This action cannot be undone!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#d33",
+      cancelButtonColor: "#3085d6",
+      confirmButtonText: "Yes, delete it!",
+    });
+
+    if (result.isConfirmed) {
       try {
         await axios.delete(`http://localhost:8080/api/users/${id}`);
-        alert("User deleted.");
+        Swal.fire("Deleted!", "User has been deleted.", "success");
         fetchUsers();
       } catch (error) {
         console.error("Error deleting user:", error);
+        Swal.fire("Error", "Failed to delete user", "error");
       }
     }
   };
@@ -46,13 +62,11 @@ const ViewUsers = () => {
 
   return (
     <div className="container mt-5 animated fadeIn">
-      {/* Go Back Button */}
       <button className="btn btn-secondary mb-3" onClick={() => navigate(-1)}>
         ← Go Back
       </button>
 
       <h2 className="text-center mb-4">Manage Users</h2>
-
 
       <div className="table-responsive">
         <table className="table table-bordered table-hover shadow-sm">
@@ -74,7 +88,10 @@ const ViewUsers = () => {
               </tr>
             ) : (
               users.map((user, index) => (
-                <tr key={user.id} className={user.approved ? "table-success" : "table-warning"}>
+                <tr
+                  key={user.id}
+                  className={user.approved ? "table-success" : "table-warning"}
+                >
                   <td>{index + 1}</td>
                   <td>{user.name}</td>
                   <td>{user.email}</td>
