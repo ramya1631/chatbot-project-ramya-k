@@ -96,6 +96,7 @@ const Chat = () => {
   );
 };
 
+
 // Inline styles used in the component
 const styles = {
   chatboxContainer: {
