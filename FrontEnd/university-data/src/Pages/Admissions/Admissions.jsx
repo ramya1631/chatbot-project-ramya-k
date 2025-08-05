@@ -13,6 +13,7 @@ const Admissions = () => {
       .catch((err) => console.error('Error fetching posts:', err)); // Log any errors
   }, []);
 
+
   return (
     <div className="admission-page">
       <div className="admission-section">
@@ -48,3 +49,4 @@ const Admissions = () => {
 
 
 export default Admissions;
+
