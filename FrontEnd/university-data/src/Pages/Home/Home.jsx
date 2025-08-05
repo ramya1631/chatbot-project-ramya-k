@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Home.css';
 import image from "../../assets/img_5.png";
 
 function Home() {
+  useEffect(() => {
+    // Disable scroll when component mounts
+    document.body.style.overflow = 'hidden';
+
+    // Re-enable scroll when component unmounts
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, []);
+
   return (
     <main>
       <section className="hero-section" style={{ backgroundImage: `url(${image})` }}>
@@ -13,7 +23,6 @@ function Home() {
         </div>
       </section>
 
-      {/* Added accessible image with alt text */}
       <section className="image-section" style={{ textAlign: 'center', marginTop: '2rem' }}>
         <img
           src={image}
