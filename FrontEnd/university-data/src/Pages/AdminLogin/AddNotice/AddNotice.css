@@ -47,3 +47,40 @@
 .notice-section button:hover {
   background-color: #003366;
 }
+/* Tablets and small laptops */
+@media (max-width: 768px) {
+  .notice-section {
+    padding: 20px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .notice-section input,
+  .notice-section textarea {
+    font-size: 1rem;
+  }
+
+  .notice-section button {
+    padding: 10px;
+    font-size: 1rem;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .notice-section {
+    padding: 15px;
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .notice-section input,
+  .notice-section textarea {
+    font-size: 0.9rem;
+  }
+
+  .notice-section button {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
