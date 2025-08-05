@@ -27,6 +27,7 @@ export const saveChatbotLog = async (log) => {
  * @returns {Array} - Array of chatbot log objects fetched from the server.
  * @throws Will throw an error if the GET request fails.
  */
+
 export const getAllChatbotLogs = async () => {
   try {
     const response = await axios.get(BASE_URL);
