@@ -35,8 +35,7 @@ This project was developed as part of the **LaunchCode Unit 2 Final Project**.
 - Git & GitHub
 - MySQL Workbench
 - Postman (API Testing)
-- Netlify (Frontend Deployment)
-- Render / Railway (Backend Deployment)
+
 
 ---
 
@@ -53,44 +52,33 @@ This project was developed as part of the **LaunchCode Unit 2 Final Project**.
 Set up a MySQL database and update application.properties:
 
 properties
-Copy
-Edit
+
 spring.datasource.url=jdbc:mysql://localhost:3306/your_db_name
 spring.datasource.username=your_username
 spring.datasource.password=your_password
 Run the backend server:
 
-bash
-Copy
-Edit
+
 ./mvnw spring-boot:run
-Or run directly from IntelliJ or Eclipse.
+Or run directly from IntelliJ 
 
 🌐 Frontend (React + Vite)
 Clone the frontend repository:
 
-bash
-Copy
-Edit
+
 git clone <your-frontend-repo-url>
 cd <your-frontend-folder>
 Install dependencies:
 
-bash
-Copy
-Edit
+
 npm install
 Start the development server:
 
-bash
-Copy
-Edit
+
 npm run dev
 Open in browser:
 
-arduino
-Copy
-Edit
+
 http://localhost:5173
 🔗 Project Artifacts
 📐 Wireframes: https://balsamiq.cloud/s7vrxaz/pyy2iv8/r2278
