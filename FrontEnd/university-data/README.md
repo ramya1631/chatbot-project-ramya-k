@@ -1,110 +1,126 @@
+
+
 # 🎓 University Data with Chatbot
 
 ## 🚀 Project Overview
 
-"University Data with Chatbot" is a full-stack web application built to assist students and administrators in accessing and managing university-related information. It offers a clean, user-friendly interface for browsing university data, interacting with a smart chatbot for quick help, and administering notices, logs, and feedback through a secure admin dashboard. This project was developed as part of the LaunchCode Unit 2 Final Project.
+**University Data with Chatbot** is a full-stack web application built to assist students and administrators in accessing and managing university-related information.
+
+It offers:
+- A clean, user-friendly interface for browsing university content
+- A chatbot for quick help and info
+- An admin dashboard to manage notices, logs, feedback, and admissions
+
+This project was developed as part of the **LaunchCode Unit 2 Final Project**.
+
+---
 
 ## 🛠️ Technologies Used
 
-### Frontend
-- React (Vite)
+### 🖼️ Frontend
+- React (with Vite)
 - React Router DOM
 - Axios
 - CSS3 (Flexbox & Grid)
 
-### Backend
+### ⚙️ Backend
 - Java Spring Boot 3
 - Spring Web
 - Spring Data JPA
 - Hibernate ORM
-- MySQL Database
+- MySQL
 
-### Tools & Platforms
+### 🧰 Tools & Platforms
 - IntelliJ IDEA
-- Visual Studio Code
 - Git & GitHub
 - MySQL Workbench
-- Netlify (Frontend Deployment)
 - Postman (API Testing)
+- Netlify (Frontend Deployment)
+- Render / Railway (Backend Deployment)
 
 ---
 
 ## 💻 Installation Instructions
 
-To run this project locally on your machine:
-
 ### 🔧 Backend (Spring Boot)
 
 1. Clone the backend repository:
+
    ```bash
    git clone <your-backend-repo-url>
    cd <your-backend-folder>
-   cd <your-backend-folder>
-Set up a MySQL database and update the application.properties file:
+
+Set up a MySQL database and update application.properties:
 
 properties
+Copy
+Edit
 spring.datasource.url=jdbc:mysql://localhost:3306/your_db_name
 spring.datasource.username=your_username
 spring.datasource.password=your_password
 Run the backend server:
 
 bash
-
+Copy
+Edit
 ./mvnw spring-boot:run
-Or run it directly from your IDE.
+Or run directly from IntelliJ or Eclipse.
 
 🌐 Frontend (React + Vite)
 Clone the frontend repository:
 
-
+bash
+Copy
+Edit
 git clone <your-frontend-repo-url>
 cd <your-frontend-folder>
 Install dependencies:
 
-
+bash
+Copy
+Edit
 npm install
 Start the development server:
 
+bash
+Copy
+Edit
 npm run dev
-Visit the app at:
+Open in browser:
 
-
+arduino
+Copy
+Edit
 http://localhost:5173
 🔗 Project Artifacts
-📐 Wireframes: View Wireframes
+📐 Wireframes: https://balsamiq.cloud/s7vrxaz/pyy2iv8/r2278
 
-🗃️ ER Diagram: View ER Diagram
+🗃️ ER Diagram: https://miro.com/app/board/uXjVJd1-a0A=/?share_link_id=200666328506
 
 🛠️ Known Issues
-❌ Chatbot does not support voice input yet.
+🗣️ Chatbot does not support voice input yet.
 
-🔐 Only basic authentication is implemented; no JWT/token-based security.
+🔐 Only basic authentication is implemented; no JWT or OAuth.
 
 🌱 Future Enhancements
-🗣️ Integrate voice recognition and speech synthesis into the chatbot.
+🗣️ Voice recognition and speech synthesis for the chatbot.
 
-🔒 Implement JWT-based authentication for secure access.
+🔐 Implement JWT-based authentication for secure user sessions.
 
-🔍 Add filter and search functionality for admin dashboard (logs, posts, feedback).
+🔍 Filter and search functionality for admin dashboard (logs, feedback, posts).
 
-📁 Enable CSV export for chatbot logs and feedback.
+📁 CSV export for chatbot logs and feedback.
 
-👤 Add profile management for students (view/edit details, view activity).
+👤 Profile management for students (view/edit details, activity history).
 
-📊 Add analytics dashboard for admin (site usage, feedback stats, etc).
+📊 Admin analytics dashboard (site usage, feedback statistics).
 
 📎 Additional Notes
-Ensure MySQL server is running before launching the backend.
+✅ Ensure MySQL server is running before launching the backend.
 
-Tested on modern browsers (Chrome, Edge).
+🌐 Tested on latest Chrome, Edge.
 
-Fully responsive UI (mobile-first design).
-
-
-
-
-
-
+📱 Fully responsive UI (mobile-first design).
 
 
 
