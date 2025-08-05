@@ -20,6 +20,7 @@ export const saveChatbotLog = async (log) => {
   }
 };
 
+
 /**
  * Retrieve all chatbot logs from the backend.
  *
