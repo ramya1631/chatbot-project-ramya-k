@@ -1,71 +1,43 @@
 package com.example.chatbot.project.controllers;
 
+import com.example.chatbot.project.Service.AdminService;
 import com.example.chatbot.project.models.Admin;
-import com.example.chatbot.project.repositories.AdminRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-
+// Allows cross-origin requests from the React frontend running on localhost:5173
+@CrossOrigin(origins = "http://localhost:5173")
+// Marks this class as a REST controller
 @RestController
-@RequestMapping("/admin")
+// Maps all requests starting with /api/admin to this controller
+@RequestMapping("/api/admin")
 public class AdminController {
 
+    // Injecting the AdminService to handle business logic
     @Autowired
-    private AdminRepository adminRepository;
+       private AdminService adminService;
 
-//http://localhost:8080/admin
-    // GET: all admins
-    @GetMapping
-    public List<Admin> getAllAdmins() {
-        return adminRepository.findAll();
-    }
+    // Handles POST requests to /api/admin/login
+    @PostMapping("/login")
+    public String login(@RequestBody Admin admin) {
+        // Attempts to find an admin with the given username and password
+        Admin existingAdmin = adminService.login(admin.getUsername(), admin.getPassword());
 
-    // GET: admin by ID
-
-
-    @GetMapping("/{id}")
-    public Admin getAdminById(@PathVariable Long id) {
-        return adminRepository.findById(id).orElse(null);
-    }
-
-    // POST: create new admin
-    @PostMapping
-    public ResponseEntity<?> createAdmin(@RequestBody Admin admin) {
-        try {
-            Admin saved = adminRepository.save(admin);
-            return ResponseEntity.ok(saved);
-        } catch (Exception e) {
-            e.printStackTrace();  // Print full error stack trace in console
-            return ResponseEntity
-                    .badRequest()
-                    .body(Map.of("error", e.getClass().getSimpleName(), "message", e.getMessage()));
+        // If credentials are valid, return success message; otherwise, return error
+        if (existingAdmin != null) {
+            return "Login successful";
+        } else {
+            return "Invalid credentials";
         }
     }
 
-    // PUT: update admin by ID
-    @PutMapping("/{id}")
-    public Admin updateAdmin(@PathVariable Long id, @RequestBody Admin updatedAdmin) {
-        Optional<Admin> optionalAdmin = adminRepository.findById(id);
-        if (optionalAdmin.isPresent()) {
-            Admin admin = optionalAdmin.get();
-            admin.setUsername(updatedAdmin.getUsername());
-            admin.setPassword(updatedAdmin.getPassword());
-            admin.setEmail(updatedAdmin.getEmail());
-            return adminRepository.save(admin);
-        }
-        return null; // or throw an exception
-    }
+    // Handles POST requests to /api/admin/register
+    @PostMapping("/register")
+    public String register(@RequestBody Admin admin) {
+        // Adds a new admin using the service layer
+        adminService.addAdmin(admin);
 
-
-    // DELETE: delete admin by ID
-    @DeleteMapping("/{id}")
-    public void deleteAdmin(@PathVariable Long id) {
-        adminRepository.deleteById(id);
+        // Return success message
+        return "Admin registered successfully";
     }
 }
-
-
