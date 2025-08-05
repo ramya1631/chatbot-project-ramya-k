@@ -1,0 +1,103 @@
+/* Container for the entire admin dashboard page */
+.admin-dashboard {
+  padding: 2rem;
+  background-color: #f5f6fa; /* Light background for contrast */
+  height: 100vh; /* Full viewport height */
+}
+
+/* Header styles to align title and logout button horizontally */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logout button styles */
+.logout-btn {
+  background-color: #e74c3c; /* Red color to indicate danger/action */
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Container holding all dashboard cards with spacing */
+.dashboard-cards {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.5rem; /* Space between cards */
+}
+
+/* Basic card styling */
+.card {
+  background-color: #3498db; /* Blue background */
+  color: white;
+  padding: 2rem;
+  flex: 1; /* Cards share equal width */
+  text-align: center;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+/* Scale card slightly on hover for interactivity */
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Dashboard card specific styles */
+.dashboard-card {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Hover effect with upward movement and stronger shadow */
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Glassmorphism style for dashboard cards */
+.dashboard-card {
+  background: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Soft blue shadow */
+  backdrop-filter: blur(10px); /* Blur background behind card */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* Enhanced hover effect for glass cards */
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Table cells vertically centered */
+.table th,
+.table td {
+  vertical-align: middle;
+}
+
+/* Modal content styling for transparency and rounded corners */
+.modal-content {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  color: #000; /* Black text */
+}
+
+/* Remove default borders in modal header */
+.modal-header {
+  border-bottom: none;
+}
+
+/* Remove default borders in modal footer */
+.modal-footer {
+  border-top: none;
+}

@@ -1,0 +1,49 @@
+/* Container for the notice section with white background, padding, rounded corners, and subtle shadow */
+.notice-section {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Heading inside notice section with bottom margin for spacing */
+.notice-section h2 {
+  margin-bottom: 20px;
+}
+
+/* Success message styling: green color, bold text, margin below for spacing */
+.notice-section .success {
+  color: green;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Form inside notice section arranged vertically using flexbox */
+.notice-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Inputs and textareas have consistent margin below, padding, border, and rounded corners */
+.notice-section input,
+.notice-section textarea {
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Submit button styling with padding, background color, white text, no border, rounded corners, and pointer cursor */
+.notice-section button {
+  padding: 12px;
+  background-color: #001f3f; /* dark navy blue */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Button hover state with a slightly lighter blue background for visual feedback */
+.notice-section button:hover {
+  background-color: #003366;
+}

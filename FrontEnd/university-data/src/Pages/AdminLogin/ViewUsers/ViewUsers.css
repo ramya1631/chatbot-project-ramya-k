@@ -1,0 +1,65 @@
+/* Container for admin content sections */
+.admin-section {
+  background: white; /* White background for clarity */
+  padding: 20px; /* Inner spacing */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Soft shadow for depth */
+}
+
+/* Heading style inside admin section */
+.admin-section h2 {
+  margin-bottom: 20px; /* Space below heading */
+}
+
+/* Table styling for admin data */
+.admin-table {
+  width: 100%; /* Full width */
+  border-collapse: collapse; /* Remove space between table cells */
+}
+
+/* Table header and cell padding and border */
+.admin-table th, .admin-table td {
+  padding: 10px 15px; /* Padding inside cells */
+  border-bottom: 1px solid #ccc; /* Light bottom border for separation */
+  text-align: left; /* Align text to left */
+}
+
+/* Table header styling */
+.admin-table th {
+  background-color: #001f3f; /* Dark blue background */
+  color: white; /* White text */
+}
+
+/* General container animation on load */
+.container {
+  animation: slideIn 0.5s ease-in-out; /* Smooth fade and slide up effect */
+}
+
+/* Keyframes for sliding in effect */
+@keyframes slideIn {
+  from {
+    opacity: 0; /* Start transparent */
+    transform: translateY(30px); /* Start slightly below */
+  }
+  to {
+    opacity: 1; /* End fully visible */
+    transform: translateY(0); /* End at original position */
+  }
+}
+
+/* Center vertical alignment and text alignment for table cells */
+.table th,
+.table td {
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* Small button smooth scale transition */
+.btn-sm {
+  transition: transform 0.2s ease;
+}
+
+/* Slight zoom effect on hover for small buttons */
+.btn-sm:hover {
+  transform: scale(1.05);
+}

@@ -1,0 +1,140 @@
+/* Keyframe animation for the background gradient sliding effect */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Floating chat toggle button fixed at bottom-right corner */
+.chat-toggle-btn {
+  position: fixed;          /* Fixed position so it stays on screen */
+  bottom: 20px;             /* 20px from bottom */
+  right: 20px;              /* 20px from right */
+  background-color: #007bff; /* Bright blue background */
+  color: white;             /* White icon/text color */
+  border: none;             /* No border */
+  border-radius: 50%;       /* Make it perfectly round */
+  width: 55px;              /* Width and height make it a circle */
+  height: 55px;
+  font-size: 22px;          /* Icon/font size */
+  cursor: pointer;          /* Cursor changes on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  z-index: 1001;            /* Stays above other elements */
+}
+
+/* Main chatbox container fixed near bottom-right, above toggle button */
+.chatbox {
+  position: fixed;          /* Fixed on screen */
+  bottom: 80px;             /* Positioned above toggle button */
+  right: 30px;
+  width: 570px;             /* Width of chatbox */
+  height: 500px;            /* Height of chatbox */
+  border-radius: 12px;      /* Rounded corners */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Soft shadow around box */
+  overflow: hidden;         /* Hide overflow content */
+  display: flex;            /* Flex layout for header/body/footer */
+  flex-direction: column;   /* Stack vertically */
+  z-index: 9999;            /* Very high to stay on top */
+  animation: gradientAnimation 12s ease infinite; /* Animate background */
+  background: linear-gradient(135deg, #4facfe, #00f2fe, #c1f960, #38f9d7); /* Gradient colors */
+  background-size: 300% 300%; /* Large background for smooth sliding */
+}
+
+/* Header bar of chatbox with solid blue background */
+.chatbox-header {
+  background-color: rgba(0, 123, 255, 0.9); /* Semi-transparent strong blue */
+  color: white;             /* White text */
+  padding: 12px;            /* Spacing inside header */
+  font-weight: bold;        /* Bold text */
+  display: flex;            /* Flex to arrange close button */
+  justify-content: space-between; /* Space between title and close button */
+  align-items: center;      /* Vertically center items */
+}
+
+/* Scrollable chat messages container */
+.chatbox-body {
+  flex: 1;                  /* Take up remaining space */
+  padding: 12px;            /* Padding inside chat body */
+  overflow-y: auto;         /* Vertical scrollbar when content overflows */
+  background-color: rgba(255, 255, 255, 0.8); /* White with some transparency */
+  backdrop-filter: blur(3px); /* Glassmorphism blur effect behind */
+}
+
+/* Footer with input box and send button */
+.chatbox-footer {
+  display: flex;            /* Horizontal layout */
+  padding: 10px;            /* Padding around input area */
+  background-color: rgba(240, 240, 240, 0.95); /* Light grey background */
+  border-top: 1px solid #ddd; /* Thin top border */
+}
+
+/* Input field styles */
+.chatbox-footer input {
+  flex: 1;                  /* Take all available width */
+  padding: 8px;             /* Padding inside input */
+  border-radius: 8px;       /* Rounded corners */
+  border: 1px solid #ccc;   /* Light grey border */
+  margin-right: 8px;        /* Space between input and button */
+}
+
+/* Send button styles */
+.chatbox-footer button {
+  padding: 8px 16px;        /* Button padding */
+  background-color: #007bff; /* Blue background */
+  border: none;             /* No border */
+  border-radius: 8px;       /* Rounded corners */
+  color: white;             /* White text */
+  cursor: pointer;          /* Pointer cursor on hover */
+}
+
+/* Common chat message bubble styles */
+.chat-message {
+  margin-bottom: 12px;      /* Space below each message */
+  padding: 10px 14px;       /* Padding inside bubble */
+  border-radius: 10px;      /* Rounded edges */
+  max-width: 100%;          /* Bubble max width */
+  font-size: 15px;          /* Text size */
+  transition: background-color 1s ease; /* Smooth bg color changes */
+}
+
+/* User message aligned to the right */
+.chat-user {
+  align-self: flex-end;     /* Align to right edge */
+  text-align: right;        /* Text aligned right */
+}
+
+/* Bot message aligned to the left */
+.chat-bot {
+  align-self: flex-start;   /* Align to left edge */
+  text-align: left;         /* Text aligned left */
+}
+
+/* Container for recommended quick-reply buttons */
+.recommendation-buttons {
+  display: flex;            /* Horizontal layout */
+  flex-wrap: wrap;          /* Wrap to next line if needed */
+  gap: 8px;                 /* Gap between buttons */
+  margin: 8px 0;            /* Margin vertical around container */
+  justify-content: center;  /* Center buttons horizontally */
+}
+
+/* Individual recommended button styling */
+.recommend-btn {
+  background-color: #e0f7fa; /* Light teal background */
+  color: #00796b;           /* Dark teal text */
+  padding: 6px 12px;        /* Padding inside button */
+  border-radius: 8px;       /* Rounded corners */
+  border: 1px solid #00796b; /* Border matching text color */
+  cursor: pointer;          /* Pointer cursor */
+  transition: 0.3s;         /* Smooth transition for hover */
+}
+
+/* Hover effect for recommendation buttons */
+.recommend-btn:hover {
+  background-color: #b2ebf2; /* Slightly darker teal on hover */
+}
+
+/* Style for close icon button making it white */
+.btn-close-white {
+  filter: invert(1);        /* Invert colors to white */
+}

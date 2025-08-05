@@ -1,0 +1,83 @@
+ /* Set full background color */
+ .admission-page {
+   background-color: #cceeff; /* sky blue */
+   min-height: 100vh;
+   padding: 40px 20px;
+ }
+
+ /* Admission section layout */
+ .admission-section {
+   max-width: 1000px;
+   margin: 0 auto;
+ }
+
+ /* Headline box (scrolling text) */
+ .headline-box {
+   background: #ffffff;
+   padding: 15px 20px;
+   border-radius: 10px;
+   border-left: 5px solid #007bff;
+   font-weight: 600;
+   color: #007bff;
+   font-size: 1rem;
+   animation: slidein 15s linear infinite;
+   white-space: nowrap;
+   overflow: hidden;
+ }
+
+ /* Slide animation */
+ @keyframes slidein {
+   0% { transform: translateX(100%); }
+   100% { transform: translateX(-100%); }
+ }
+
+ /* Announcement card */
+ .card-announcement {
+   background-color: #ffffff;
+   border-left: 4px solid #28a745;
+   border-radius: 10px;
+   padding: 15px 20px;
+   margin-bottom: 15px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   transition: transform 0.3s ease;
+ }
+
+ .card-announcement:hover {
+   transform: translateY(-5px);
+ }
+
+ /* Title */
+ .card-title {
+   font-weight: bold;
+   font-size: 1.2rem;
+   color: #e91e63;
+ }
+
+ /* Content text */
+ .card-text {
+   font-size: 1rem;
+   color: #333;
+ }
+
+ /* Timestamp */
+ .timestamp {
+   font-size: 0.85rem;
+   color: #888;
+   margin-top: 5px;
+   font-style: italic;
+ }
+
+ /* Responsive layout */
+ @media (max-width: 768px) {
+   .headline-box {
+     font-size: 0.95rem;
+   }
+
+   .card-title {
+     font-size: 1.1rem;
+   }
+
+   .card-text {
+     font-size: 0.95rem;
+   }
+ }
