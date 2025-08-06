@@ -1,3 +1,16 @@
+/* Main layout container for full height support */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main area should grow to fill space before footer */
+main {
+  flex: 1;
+}
+
+/* Hero Section with background image */
 .hero-section {
   background-size: cover;
   background-position: center;
@@ -11,23 +24,65 @@
   animation: fadeIn 2s ease-in-out;
 }
 
+/* Inner content box on hero section */
 .hero-content {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 30px;
   border-radius: 15px;
+  max-width: 90%;
 }
 
+/* Title animation */
 .animated-title {
   font-size: 3rem;
   animation: slideUp 1s ease forwards;
 }
 
+/* CTA Button */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1rem;
+  color: white;
+  background-color: #007bff;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Fade-in and slide-up animations */
 @keyframes slideUp {
-  from { transform: translateY(50px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .animated-title {
+    font-size: 2rem;
+  }
+
+  .hero-content {
+    padding: 20px;
+  }
 }

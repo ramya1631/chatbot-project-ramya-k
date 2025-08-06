@@ -1,56 +1,51 @@
-// ViewMessages.jsx
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-
 function ViewMessages() {
-  const [users, setUsers] = useState([]);
+  const [feedbacks, setFeedbacks] = useState([]);
 
-  // Fetch all user messages from backend
-  const fetchMessages = async () => {
+  const fetchFeedbacks = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/api/user/getAll");
-      setUsers(response.data);
+      const response = await axios.get("http://localhost:8080/api/contacts"); // ✅ Correct endpoint
+      setFeedbacks(response.data);
     } catch (error) {
-      console.error("Error fetching messages:", error);
+      console.error("Error fetching feedbacks:", error);
     }
   };
 
-  // Call fetchMessages on component mount
   useEffect(() => {
-    fetchMessages();
+    fetchFeedbacks();
   }, []);
 
   return (
-    <div className="view-messages-container">
-      <h2>Messages from Users</h2>
+    <div className="view-messages-container" style={{ padding: "2rem" }}>
+      <h2>User Feedback</h2>
 
       <table className="table table-bordered table-hover">
         <thead className="table-dark">
           <tr>
             <th>ID</th>
-            <th>Username</th>
-            <th>Feedback</th>
-            <th>Approved</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Subject</th>
+            <th>Message</th>
           </tr>
         </thead>
         <tbody>
-          {users.length === 0 ? (
+          {feedbacks.length === 0 ? (
             <tr>
-              <td colSpan="4" className="text-center">
-                No messages found.
+              <td colSpan="5" className="text-center">
+                No feedback found.
               </td>
             </tr>
           ) : (
-            users.map((user) => (
-              <tr
-                key={user.id}
-                className={user.approved ? "table-success" : "table-warning"}
-              >
-                <td>{user.id}</td>
-                <td>{user.username}</td>
-                <td>{user.feedback}</td>
-                <td>{user.approved ? "Yes" : "No"}</td>
+            feedbacks.map((fb) => (
+              <tr key={fb.id}>
+                <td>{fb.id}</td>
+                <td>{fb.name}</td>
+                <td>{fb.email}</td>
+                <td>{fb.subject}</td>
+                <td>{fb.message}</td>
               </tr>
             ))
           )}
