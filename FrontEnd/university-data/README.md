@@ -1,4 +1,5 @@
 🎓 University Data with Chatbot
+
 🚀 Project Overview
 University Data with Chatbot is a full-stack web application built to assist students and administrators in accessing and managing university-related information.
 
@@ -24,6 +25,7 @@ Axios
 CSS3 (Flexbox & Grid)
 
 ⚙️ Backend
+
 Java Spring Boot 3
 
 Spring Web
@@ -35,6 +37,7 @@ Hibernate ORM
 MySQL
 
 🧰 Tools & Platforms
+
 IntelliJ IDEA
 
 Git & GitHub
@@ -85,11 +88,13 @@ http://localhost:5173
 🗃️ ER Diagram: https://miro.com/app/board/uXjVJd1-a0A=/?share_link_id=200666328506
 
 🛠️ Known Issues
+
 🗣️ Chatbot does not support voice input yet
 
 🔐 Only basic authentication is implemented; no JWT or OAuth
 
 🌱 Future Enhancements
+
 🗣️ Voice recognition and speech synthesis for the chatbot
 
 🔐 Implement JWT-based authentication for secure user sessions
@@ -103,6 +108,7 @@ http://localhost:5173
 📊 Admin analytics dashboard (site usage, feedback statistics)
 
 📎 Additional Notes
+
 ✅ Ensure MySQL server is running before launching the backend
 
 🌐 Tested on latest Chrome
