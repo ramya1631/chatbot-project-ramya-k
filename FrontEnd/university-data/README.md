@@ -13,6 +13,7 @@ An admin dashboard to manage notices, logs, feedback, and admissions
 This project was developed as part of the LaunchCode Unit 2 Final Project.
 
 🛠️ Technologies Used
+
 🖼️ Frontend
 React (with Vite)
 
@@ -43,60 +44,45 @@ MySQL Workbench
 Postman (API Testing)
 
 💻 Installation Instructions
+
 🔧 Backend (Spring Boot)
 Clone the backend repository:
 
-bash
-Copy
-Edit
+
 git clone <your-backend-repo-url>
 cd <your-backend-folder>
 Set up a MySQL database and update your application.properties:
 
-properties
-Copy
-Edit
 spring.datasource.url=jdbc:mysql://localhost:3306/your_db_name  
 spring.datasource.username=your_username  
 spring.datasource.password=your_password  
 Run the backend server:
 
-bash
-Copy
-Edit
 ./mvnw spring-boot:run
 Or run it directly from IntelliJ.
 
 🌐 Frontend (React + Vite)
 Clone the frontend repository:
 
-bash
-Copy
-Edit
 git clone <your-frontend-repo-url>
 cd <your-frontend-folder>
 Install dependencies:
 
-bash
-Copy
-Edit
 npm install
 Start the development server:
 
-bash
-Copy
-Edit
+
 npm run dev
 Open the app in your browser:
 
-arduino
-Copy
-Edit
-http://localhost:5173
-🔗 Project Artifacts
-📐 Wireframes: View Wireframes
 
-🗃️ ER Diagram: View ERD
+http://localhost:5173
+
+🔗 Project Artifacts
+
+📐 Wireframes: https://balsamiq.cloud/s7vrxaz/pyy2iv8/r2278
+
+🗃️ ER Diagram: https://miro.com/app/board/uXjVJd1-a0A=/?share_link_id=200666328506
 
 🛠️ Known Issues
 🗣️ Chatbot does not support voice input yet
